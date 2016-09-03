@@ -5,9 +5,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/app.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/app.css" }}">
   </head>
   <body>
+
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text"><a href="/">Seed</a> </li>
+    </ul>
+  </div>
+</div>
 
     {{ content }}
 

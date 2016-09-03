@@ -1,0 +1,26 @@
+tbody tr {
+  &.dates {
+    td {
+      vertical-align: text-top;
+      div {
+        float: right;
+        color: #642;
+        padding: 0em 0.6em;
+        background-color: #bdf;
+        border-radius: 1em 1em 1em 3em;
+      }
+    }
+  }
+  td[colspan] {
+    text-align: center;
+    span {
+      background-color: #dbf;
+      padding: 0.4em 1.2em;
+      border-radius: 10px;
+      &.headline-for-the-week {
+        background-color: #fdb;
+        border-radius: 900px;
+      }
+    }
+  }
+}
