@@ -59,22 +59,22 @@ var PATHS = {
   ]
 };
 
-// Delete the "docs" folder
+// Delete the "dist/docs" folder
 // This happens every time a build starts
 gulp.task('clean', function(done) {
-  rimraf('docs', done);
+  rimraf('dist/docs', done);
 });
 
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 gulp.task('copy', function() {
   return gulp.src(PATHS.assets)
-    .pipe(gulp.dest('docs/assets'));
+    .pipe(gulp.dest('dist/docs/assets'));
 });
 
 // Build the Jekyll Site
 gulp.task('jekyll', function(done) {
-  return cp.spawn('jekyll', ['build', '--source', 'src', '--destination', 'docs'], {
+  return cp.spawn('jekyll', ['build', '--source', 'src', '--destination', 'dist/docs'], {
       stdio: 'ignore'
     })
     .on('close', done);
@@ -109,7 +109,7 @@ gulp.task('sass', function() {
     .pipe(uncss)
     .pipe(cleancss)
     .pipe($.if(!isProduction, $.sourcemaps.write()))
-    .pipe(gulp.dest('docs/assets/css'))
+    .pipe(gulp.dest('dist/docs/assets/css'))
     .pipe(browser.reload({ stream: true }));
 });
 
@@ -126,11 +126,11 @@ gulp.task('javascript', function() {
     .pipe($.concat('app.js'))
     .pipe(uglify)
     .pipe($.if(!isProduction, $.sourcemaps.write()))
-    .pipe(gulp.dest('docs/assets/js'))
+    .pipe(gulp.dest('dist/docs/assets/js'))
     .on('finish', browser.reload);
 });
 
-// Copy images to the "docs" folder
+// Copy images to the "dist/docs" folder
 // In production, the images are compressed
 gulp.task('images', function() {
   var imagemin = $.if(isProduction, $.imagemin({
@@ -139,11 +139,11 @@ gulp.task('images', function() {
 
   return gulp.src('src/assets/img/**/*')
     .pipe(imagemin)
-    .pipe(gulp.dest('docs/assets/img'))
+    .pipe(gulp.dest('dist/docs/assets/img'))
     .on('finish', browser.reload);
 });
 
-// Build the "docs" folder by running all of the above tasks
+// Build the "dist/docs" folder by running all of the above tasks
 gulp.task('build', function(done) {
   sequence('clean', ['jekyll', 'sass', 'javascript', 'images', 'copy'], done);
 });
@@ -151,7 +151,7 @@ gulp.task('build', function(done) {
 // Start a server with LiveReload to preview the site in
 gulp.task('server', ['build'], function() {
   browser.init({
-    server: 'docs', port: PORT
+    server: 'dist/docs', port: PORT
   });
 });
 

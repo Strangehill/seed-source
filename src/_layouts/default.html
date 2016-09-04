@@ -14,9 +14,35 @@
     <ul class="menu">
       <li class="menu-text">
         <a href="/">
-          <img src="/assets/img/coffee-bean.svg" style="width:1.5em;">
+          <img src="/assets/img/coffee-bean.svg" alt="a seed" style="width:1.5em;">
           Seed
         </a>
+      </li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li>
+        <a href="#">
+          Lions
+          <img src="/assets/img/lion-2.svg" alt="a lion" style="width:2em;">
+        </a>
+        <ul class="menu vertical">
+          {% for post in site.categories.lions %}
+          <li><a href="#">{{ post.categories[2] }}|{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          Koalas
+          <img src="/assets/img/koala-2.svg" alt="a koala" style="width:2em;">
+        </a>
+        <ul class="menu vertical">
+          {% for post in site.categories.koalas %}
+          <li><a href="#">{{post.categories[2]}}|{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
       </li>
     </ul>
   </div>
