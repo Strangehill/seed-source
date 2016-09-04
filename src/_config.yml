@@ -17,11 +17,26 @@ url: "http://seed.argote.org" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
-future: true
-
 # Build settings
 markdown: kramdown
 
 # Assets are being handled by Gulp
 exclude: [assets, Gemfile, Gemfile.lock]
 keep_files: [assets]
+
+permalink: pretty
+future: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "lions/lessons"
+    values:
+      layout: lesson
+  - scope:
+      path: "koalas/lessons"
+    values:
+      layout: lesson

@@ -29,7 +29,11 @@
         </a>
         <ul class="menu vertical">
           {% for post in site.categories.lions %}
-          <li><a href="#">{{ post.categories[2] }}|{{ post.title }}</a></li>
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.categories[2] | remove: "week-" }} | {{ post.title | slice: 0, 3 }}
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </li>
@@ -40,7 +44,11 @@
         </a>
         <ul class="menu vertical">
           {% for post in site.categories.koalas %}
-          <li><a href="#">{{post.categories[2]}}|{{ post.title }}</a></li>
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.categories[2] | remove: "week-" }} | {{ post.title | slice: 0, 3 }}
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </li>

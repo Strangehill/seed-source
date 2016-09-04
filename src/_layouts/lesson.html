@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="callout large">
+  <h2 class="text-center">
+    {{ page.categories[2] | replace: 'week-', 'Week ' }}
+      {% if page.categories contains 'koalas' %}
+        <img src="/assets/img/koala-2.svg" alt="a koala" style="width:3em;">
+      {% endif %}
+      {% if page.categories contains 'lions' %}
+      <img src="/assets/img/lion-2.svg" alt="a lion" style="width:3em;">
+      {% endif %}
+    {{ page.date | date: "%a, %b %d" }}
+    </p>
+  {{ content }}
+</div>
