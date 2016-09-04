@@ -23,5 +23,5 @@ future: true
 markdown: kramdown
 
 # Assets are being handled by Gulp
-exclude: [assets]
+exclude: [assets, Gemfile, Gemfile.lock]
 keep_files: [assets]
