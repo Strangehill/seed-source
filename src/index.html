@@ -45,29 +45,39 @@ layout: default
             <tr class="dates">
                 <td>
                   <div>
-                    {{ week.day.Monday.date | date: "%d" }}
+                    {% unless week.day.Monday.holiday %}
+                      {{ week.day.Monday.date | date: "%d" }}
+                    {% endunless %}
                   </div>
                 </td>
                 <td>
                   <div>
-                    {{ week.day.Tuesday.date | date: "%d" }}
+                    {% unless week.day.Tuesday.holiday %}
+                      {{ week.day.Tuesday.date | date: "%d" }}
+                    {% endunless %}
                   </div>
                 </td>
                 <td>
                   <div>
-                    {{ week.day.Wednesday.date | date: "%d" }}
+                    {% unless week.day.Wednesday.holiday %}
+                      {{ week.day.Wednesday.date | date: "%d" }}
+                    {% endunless %}
                   </div>
                 </td>
                 <td>
                   <div>
-                    {{ week.day.Thursday.date | date: "%d" }}
+                    {% unless week.day.Thursday.holiday %}
+                      {{ week.day.Thursday.date | date: "%d" }}
+                    {% endunless %}
                   </div>
                 </td>
                 <td>
                   <div>
                       <a href="">
                       </a>
-                    {{ week.day.Friday.date | date: "%d" }}
+                    {% unless week.day.Friday.holiday %}
+                      {{ week.day.Friday.date | date: "%d" }}
+                    {% endunless %}
                   </div>
                 </td>
                 <td>
