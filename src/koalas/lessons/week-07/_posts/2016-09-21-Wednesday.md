@@ -2,6 +2,8 @@
 week-num: 7
 ---
 
+<a class="button" href="https://drive.google.com/open?id=0B2udwoaMmP7hOVdCNmlWYXVITkk">Daily Routine Worksheet</a>
+
 ## Greeting:
 
 Name. *Weather*, review Daily routine
