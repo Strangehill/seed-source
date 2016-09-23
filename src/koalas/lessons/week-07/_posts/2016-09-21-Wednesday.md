@@ -2,7 +2,7 @@
 week-num: 7
 ---
 
-<a class="button" href="https://drive.google.com/open?id=0B2udwoaMmP7hOVdCNmlWYXVITkk">Daily Routine Worksheet</a>
+<a class="button alert" href="https://drive.google.com/open?id=0B2udwoaMmP7hOVdCNmlWYXVITkk">Version 1 of this: Daily Routine Worksheet. Modified and postponed for Friday's class</a>
 
 ## Greeting:
 
