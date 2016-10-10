@@ -35,18 +35,11 @@
           <img src="/assets/img/lion-2.svg" alt="a lion" style="width:2em;">
         </a>
         <ul class="menu vertical">
-          {% for post in site.categories.lions %}
           <li>
-            <a href="{{ post.url }}">
-              <span style="font-size:0.7em;">week</span>
-              {{ post.categories[2] | remove: "week-" }}
-              |
-              <span style="font-size:0.7em;">
-              {{ post.title | slice: 0, 3 }}
-              </span>
+            <a href="/pages/lion-lesson-plans/">
+              Lion Lesson Plans
             </a>
           </li>
-          {% endfor %}
         </ul>
       </li>
       <li>
@@ -55,18 +48,11 @@
           <img src="/assets/img/koala-2.svg" alt="a koala" style="width:2em;">
         </a>
         <ul class="menu vertical">
-          {% for post in site.categories.koalas %}
-          <li>
-            <a href="{{ post.url }}">
-              <span style="font-size:0.7em;">week</span>
-              {{ post.categories[2] | remove: "week-" }}
-              |
-              <span style="font-size:0.7em;">
-              {{ post.title | slice: 0, 3 }}
-              </span>
-            </a>
-          </li>
-          {% endfor %}
+            <li>
+              <a href="/pages/koala-lesson-plans/">
+                Koala Lesson Plans
+              </a>
+            </li>
         </ul>
       </li>
     </ul>
